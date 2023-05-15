@@ -1,0 +1,41 @@
+version: '3.1'
+
+services:
+  expressapp:
+    build: .
+    volumes:
+      - ../Volume/files/csv:/home/files/csv
+      - ../Volume/files/parquet:/home/files/parquet
+      - ../Volume/files/json:/home/files/json
+      - ../Volume/files/Output:/home/files/Output
+    privileged: true
+    ports:
+      - "10124:10124"
+    depends_on:
+      - uploadfileapi
+      - spark-flask-api
+    restart: always
+  
+  spark-flask-api:
+    build: ../spark-flask-api/
+    privileged: true
+    volumes:
+      - ../Volume/files/csv:/home/flask_api/csv
+      - ../Volume/files/parquet:/home/flask_api/parquet
+      - ../Volume/files/json:/home/flask_api/json
+      - ../Volume/files/Output:/home/flask_api/Output
+    ports:
+      - "10050:10050"
+    restart: always
+
+  uploadfileapi:
+    build: ../FileUploaderAPIExpress/
+    privileged: true
+    volumes:
+      - ../Volume/files/csv/:/home/upload/Volume/files/csv/
+      - ../Volume/files/json/:/home/upload/Volume/files/json/
+      - ../Volume/files/parquet/:/home/upload/Volume/files/parquet/
+      - ../Volume/files/Output/:/home/upload/Volume/files/Output/
+    ports:
+      - "10404:10404"
+    restart: always

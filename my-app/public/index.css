@@ -1,0 +1,66 @@
+.largebtn {
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+}
+
+.max-width {
+    max-width: 100%;
+}
+
+.font-change {
+    font-size: 30px;
+}
+
+.hr-line {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 96%;
+    background-color: black;
+    height: 1px;
+}
+
+.size-danger {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20px;
+    height: 15%;
+    border-radius: 10px;
+}
+
+#path_input {
+    margin-top: 5%;
+    width: 50%;
+    margin-left: 25%;
+}
+
+#submit-button {
+    margin-top: 1%;
+    width: 10%;
+    margin-left: 45%;
+    width: auto;
+}
+
+#file-manager-button {
+    margin-top: 1%;
+    width: 10%;
+    margin-left: 45%;
+    width: auto;
+}
+
+#spinner-rotated {
+    margin: 10% 50% 25% 50%;
+    height: 100px;
+    width: 100px;
+    border-width: 10px;
+}
+
+#loading-test {
+    margin-top: 20%;
+}
+
+.just-center {
+    margin-top: 20%;
+    margin-left: 15%;
+}
