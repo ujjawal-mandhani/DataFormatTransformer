@@ -12,4 +12,4 @@
     docker-compose up
 ```
 
-![GIF Example](./assets/output.gif)
+![GIF Example](./assets/final.mp4)
