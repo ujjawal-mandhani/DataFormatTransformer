@@ -42,7 +42,3 @@ Excel and avro files conversion will be supported soon
 #### Architectural diagram
 
 ![Diagram](./assets/Architecture.png)
-
-#### Special thanks
-
-* ChatGPT
